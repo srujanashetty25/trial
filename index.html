@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Real Estate Management</title>
+</head>
+
+<body>
+    <header class="bg-dark text-white text-center py-3">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#">Real Estate Management</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#search">Search Properties</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#featured">Featured Properties</a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="modal" data-target="#loginModal"
+                            href="#">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="modal" data-target="#signupModal"
+                            href="#">Sign Up</a></li>
+                </ul>
+            </div>
+        </nav>
+        <h1 class="mb-4">Welcome to Your Dream Home!</h1>
+        <p class="lead">Explore a wide range of properties for sale. Whether you're buying or selling, we're here to
+            help you find your perfect home.</p>
+        <a href="#search" class="btn btn-primary btn-lg">Search Properties</a>
+    </header>
+
+    <section id="home" class="py-5">
+        <div class="container">
+            <!-- Content for the Home section -->
+        </div>
+    </section>
+
+    <section id="search" class="py-5">
+        <div class="container">
+            <!-- Content for the Search Properties section -->
+        </div>
+    </section>
+
+    <section id="featured" class="py-5">
+        <div class="container">
+            <!-- Content for the Featured Properties section -->
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2023 Real Estate Management. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Login Modal -->
+ 
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Login form with email and password -->
+                    <form>
+                        <div class="form-group">
+                            <label for="loginEmail">Email address</label>
+                            <input type="email" class="form-control" id="loginEmail" placeholder="Enter email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" placeholder="Password"
+                                required>
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="submitLoginForm()">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Sign-up form with first name, last name, email, password, and captcha -->
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="firstName">First Name</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="Enter first name" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="Enter last name" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupaddress1">Address1</label>
+                            <input type="text" class="form-control" id="signupaddress1" placeholder="Enter address line 1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupaddress2">Address2</label>
+                            <input type="text" class="form-control" id="signupaddress2" placeholder="Enter adress line 2" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupEmail">Email address</label>
+                            <input type="email" class="form-control" id="signupEmail" placeholder="Enter email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupPassword">Password</label>
+                            <input type="password" class="form-control" id="signupPassword" placeholder="Password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupCaptcha">Captcha</label>
+                            <input type="text" class="form-control" id="signupCaptcha" placeholder="Enter captcha" required>
+                            <!-- Add a simple captcha code here -->
+                            <img src="generateCaptcha.php" alt="Captcha Image">
+
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="submitSignupForm()">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function submitLoginForm() {
+            var email = document.getElementById('loginEmail').value;
+            var password = document.getElementById('loginPassword').value;
+
+            // Add your logic for handling the login form data here
+            console.log('Email:', email);
+            console.log('Password:', password);
+
+            // For a real application, you would typically send this data to a server for validation
+            // and authentication, and then redirect the user based on the result.
+        }
+    </script>
+    <script>
+        function submitSignupForm() {
+            var firstName = document.getElementById('firstName').value;
+            var lastName = document.getElementById('lastName').value;
+            var address1 = document.getElementById('address1').value;
+            var address2 = document.getElementById('address2').value;
+            var email = document.getElementById('signupEmail').value;
+            var password = document.getElementById('signupPassword').value;
+
+            // Add your logic for handling the sign-up form data here
+            console.log('First Name:', firstName);
+            console.log('Last Name:', lastName);
+            console.log('Address Line1:',address1);
+            console.log('Address Line2:',address2);
+            console.log('Email:', email);
+            console.log('Password:', password);
+
+            // For a real application, you would typically send this data to a server for validation
+            // and user registration, and then redirect the user based on the result.
+        }
+    </script>
+</body>
+
+</html>
